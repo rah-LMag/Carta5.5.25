@@ -1,0 +1,198 @@
+/* assets/css/carta.css */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('imgs/wallpaperbunny.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+audio {
+    display: none;
+}
+
+#musicaInicial {
+    display: none; /* Esconde os controles da música inicial */
+    /* position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 20; */ /* Comente ou remova essas linhas se não precisar da posição */
+}
+
+#musicaCarta {
+    display: none; /* Oculta a música da carta inicialmente */
+}
+
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.senha-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.senha-banner {
+    position: absolute;
+    top: -30px; /* Ajuste a posição conforme necessário */
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 34px;
+    font-family: 'Great Vibes', cursive;
+    opacity: 0.8;
+}
+
+.overlay input {
+    padding: 10px 10px 10px 35px; /* Espaço para o ícone */
+    font-size: 14px;
+    border-radius: 14px;
+    border: none;
+    box-sizing: border-box; /* Garante que o padding não afete a largura */
+}
+
+.overlay input::before {
+    content: "\uD83D\uDD12"; /* Caractere Unicode para cadeado */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+.overlay button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 12px;
+    border: none;
+    background: rgba(161, 161, 161, 0.786);
+    color: #000000;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.overlay button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    max-width: 80%; /* Aumentei para dar mais espaço */
+    margin: 100px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.2);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Decoração da borda */
+}
+
+.card img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 15px; /* Bordas arredondadas */
+    margin: 10px;
+    border: 3px solid #fff;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
+.card p {
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: appear 1s forwards ease-out;
+    animation-delay: var(--delay);
+    line-height: 1.8;
+}
+
+.signature::after {
+    content: "💖";
+    margin-left: 10px;
+    font-size: 1.2em;
+    opacity: 0.7;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin: 50px 20px;
+        padding: 20px;
+    }
+
+    .card img {
+        width: 100px;
+        height: 130px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .signature {
+        font-size: 24px;
+    }
+}

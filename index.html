@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Carta para você 💌</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/carta.css">
+</head>
+<body>
+
+  <audio autoplay loop id="musicaInicial">
+    <source src="assets/musicas/beatles.mp3" type="audio/mp3">
+    Seu navegador não suporta a reprodução de áudio.
+</audio>
+<audio id="musicaCarta">
+    <source src="assets/musicas/beatles.mp3" type="audio/mp3">
+    Seu navegador não suporta a reprodução de áudio.
+</audio>
+
+<div class="overlay" id="senhaTela">
+    <div class="senha-container">
+        <div class="senha-banner">Digite a chave </div><p></p>
+        <input type="password" id="senha" placeholder="Digite a senha..." />
+        <button id="abrirCartaBtn">Abrir 💌</button>
+    </div>
+</div>
+
+<div class="card" id="carta" style="display:none;">
+    <h2>Para o meu amor 💖</h2>
+    <img src="assets/css/imgs/foto1.jpeg" alt="Foto 1"/>
+    <img src="assets/css/imgs/foto2.jpeg" alt="Foto 2"/>
+
+    <div id="texto">
+        <p style="--delay: 0s;">Amor, você é incrível. Sou feliz por te conhecer, por crescer e estar contigo.</p>
+        <p style="--delay: 1s;">Passamos por muitas coisas, mas ainda vamos passar por mais kkkkk mas saiba que vamos enfrentar juntos, vamos ter paciência e fazer dar certo.</p>
+        <p style="--delay: 2s;">Seja lá o que passarmos, que nós possamos estar sempre ajudando um ao outro, pois sei que é com você que quero passar minha vida, e até o pós kkkkk</p>
+        <p style="--delay: 3s;">Quero te agradecer por aparecer na minha vida, me alegrando e me iluminando, me trazendo de volta a mim e me incentivando a ser alguém melhor.<br>Espero estar te fazendo o mesmo, pois te devo muito pelo bem que você me faz. </p>
+        <p style="--delay: 4s;">Você é um homem incrível. Fico admirada com o quanto você foi crescendo, o quanto tem mudado e para melhor. Tenho muito orgulho de ver que você quer estar mais com nosso Senhor, isso me traz paz, pois nada melhor do que um homem que ame a Deus em primeiro lugar para me amar em segundo, para congregar, para consagrarmos nossos dias à Ele, e ensinarmos o que sabemos aos nossos próximos.</p>
+        <p style="--delay: 5s;">Devemos sempre louvar e adorar nosso Senhor. Pois por causa dEle, estamos aqui hoje, comemorando esse "mêsversário". Por causa dEle temos um ao outro de novo, e temos à Ele! Que têm nos sustentado, cuidado, e nos abençoado principalmente com a presença e divina graça dEle.</p>
+        <p style="--delay: 6s;">Espero que tenha gostado da carta e meu texto simpleszão.</p>
+        <p style="--delay: 8s;">Eu te amo, meu gatinho!</p>
+    </div>
+
+    <div class="emoji">💖🥰</div>
+    <div class="signature">Com amor, sua gatinha ✍️</div>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
